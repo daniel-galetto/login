@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Components/Home';
-import Admin from './Components/Admin';
+import Tareas from './Components/Tareas';
 import Login from './Components/Login';
 import Menu from './Components/Menu';
 
@@ -16,7 +16,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" component={Home}></Route>
-          <Route path="/admin" component={Admin}></Route>
+          <Route path="/tareas" component={Tareas}></Route>
           <Route path="/login" component={Login}></Route>
         </Switch>
 

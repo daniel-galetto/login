@@ -30,7 +30,7 @@ const Menu = () => {
                     }
                     
                     {
-                    usuario ? (<button className="btn btn-outline-success me-2" type="button"><Link to='/admin'>Admin</Link></button>) : (<span></span>) 
+                    usuario ? (<button className="btn btn-outline-success me-2" type="button"><Link to='/tareas'>Tareas</Link></button>) : (<span></span>) 
                     }    
                     
                     {

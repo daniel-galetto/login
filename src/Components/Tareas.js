@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import uniqid from 'uniqid'
 
-const Admin = () => {
+const Tareas = () => {
      
     const [task,setTask] = useState('')
     const [list,setList] = useState([])
@@ -48,7 +48,7 @@ const Admin = () => {
             <div className="row">
                 <form className="form-group" onSubmit={edit? editlist : addTask} >
                     <h2>Enter Task's</h2>
-                    <input onChange={(event)=>{setTask(event.target.value)}} value = {task} type="text" placeholder="ex: Paying taxes" required/>
+                    <input onChange={(event)=>{setTask(event.target.value)}} value = {task}  type="text" placeholder="ex: Paying taxes" required/>
                     <input className="btn btn-primary block m-3" type="submit" value={edit? "edit" : "Add"}/>
                 </form>
             </div>
@@ -57,7 +57,7 @@ const Admin = () => {
                 <ul>
                     {     
                         list.map(item => 
-                            <li key={item.id}  className="list-group-item">{item.taskName}
+                            <li key={item.id}  className="list-group-item m-1 p-4">{item.taskName}
                                 <button onClick= {()=> {deleteTask(item.id)}} className="btn btn-danger float-end">Delete</button>
                                 <button onClick= {()=> {editTask(item)}} className="btn btn-warning float-end">edit</button>
                             </li>
@@ -71,7 +71,7 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default Tareas
 
 
 
